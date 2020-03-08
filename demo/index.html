@@ -58,7 +58,6 @@
       </div>
     </div>
 
-    <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
 
     <script>
@@ -68,14 +67,19 @@
 
         // More info https://github.com/hakimel/reveal.js#dependencies
         dependencies: [
-          { src: 'plugin/reveal-run-in-terminal.js', async: true,
-          callback: function() {
-            RunInTerminal.init({defaultBin: 'node'});
-          } },
           { src: 'plugin/markdown/marked.js' },
           { src: 'plugin/markdown/markdown.js' },
           { src: 'plugin/notes/notes.js', async: true },
-          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+          { src: 'plugin/highlight/highlight.js', async: true, 
+            callback: function() { 
+              hljs.initHighlightingOnLoad(); 
+            }
+          },
+          { src: 'plugin/reveal-run-in-terminal.js', async: true,
+            callback: function() {
+              RunInTerminal.init({defaultBin: 'node'});
+            } 
+          },
         ]
       });
     </script>

@@ -7,6 +7,7 @@ let app = express();
 app.use(revealRunInTerminal({
   publicPath: __dirname,
   commandRegex: /node|ruby/,
+//  allowRemote: true,
   log: true
 }));
 
