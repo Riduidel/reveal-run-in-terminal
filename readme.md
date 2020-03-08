@@ -16,6 +16,10 @@ _**IMPORTANT NOTE**_: This, um, exposes a URL that can be used to execute user-p
 
 ### Run the Server
 
+We provide servers for "some" languages (the ones for which the plugin developers have some experience with).
+If your server-side language of choice isn't listed here ... see "Implementing a server".
+
+#### Run the JS server
 The plugin requires that your presentation be served by [Express](https://expressjs.com/). A minimal version looks like this:
 
 ```javascript
@@ -38,6 +42,8 @@ Options for `revealRunInTerminal`:
 - **`log`** (_default_: `false`): Whether to log executed commands (along with PID and exit code) to the server console.
 
 The server handles exposing the plugin's client-side JS and CSS dependencies. It's up to you make sure reveal.js files are exposed (the above is a good approach). You can keep your own source files (including reveal.js ones if you're vendoring them) in the public path reveal-run-in-terminal uses, but you do not have to.
+
+You can also see an example usage in [demo/app.js](demo/app.js)
 
 ### Include the CSS
 
@@ -103,6 +109,24 @@ So, the process goes:
 ### Demo Server
 
 `npm start` runs it on port 5000.
+
+### Implementing a server
+A server for revealjs-run-in-terminal should implement a classical http file server **and** the following endpoint
+
+    GET reveal-run-in-terminal?bin={binary}&src={src-path}&args={args}
+
+Where
+
+* `binary` is a name of a binary available on `$PATH`
+* `src` is an executable script for `binary`
+* `args` are a list of space-separated arguments
+
+The `demo` folder contains a few examples that can be used to validate your implementation.
+The requests used are
+
+    GET /reveal-run-in-terminal?bin=node&src=code%2Fnode-example.js
+    GET /reveal-run-in-terminal?bin=node&src=code%2Fnode-error-example.js
+    GET /reveal-run-in-terminal?bin=ruby&src=code%2Fruby-argv-example.rb&args=the%20quick%20%27brown%20fox%27
 
 ### Client Code
 
