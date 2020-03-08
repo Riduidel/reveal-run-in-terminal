@@ -132,6 +132,10 @@ The requests used are
 
 `npm run build` browserifies it.
 
+### How to release ?
+
+Just run [`smooth-release](https://github.com/buildo/smooth-release)` which performs "clean" release in a way compatible with my maven habitus.
+
 ### Notes
 
 - `/reveal-run-in-terminal` is implemented as a `GET` request in order to use the `EventSource` API on the client to stream process output. Yes, socket.io something something but this avoids additional dependencies and is pretty simple.
