@@ -15,13 +15,12 @@
     "build": "browserify --debug src/reveal-run-in-terminal.js > static/plugin/reveal-run-in-terminal.js"
   },
   "author": {
-    "name": "Daniel Luxemburg",
-    "email": "daniel.luxemburg@gmail.com",
-    "url": "http://dluxemburg.com"
+    "name": "Nicolas Delsaux",
+    "email": "nicolas.delsaux@gmx.fr"
   },
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git://github.com/dluxemburg/reveal-run-in-terminal.git"
+    "url": "git://github.com/Riduidel/reveal-run-in-terminal.git"
   }
 }
