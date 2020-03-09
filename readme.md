@@ -1,6 +1,8 @@
 # reveal-run-in-terminal
 
-_**IMPORTANT NOTE**_: This project is a non-aggressive fork of https://github.com/dluxemburg/reveal-run-in-terminal existing solely due to the fact that the original project seems dead : no PR has been merged since 2017, and no issue has received any kind of comment since 2016. As I need at least one release of this project, I chose to fork it and to let people know this fork exist. If @dluxemburg one day come back to this project, I will be glad to give him back any progress made.
+_**IMPORTANT NOTE**_: After discussion with Stanley Nguyen, it appears it maintains a more davanced/usable fork of reveal-run-in-terminal.
+As a consequence, instead of maintaining two forks of that very interesting plugin, it is way better to let the best implementor become the maintainer.
+In other words, this repository is archived and the official version of reveal-run-in-terminal is available at https://github.com/stanleynguyen/reveal-run-in-terminal
 
 Add executable code examples to you [reveal.js](https://github.com/hakimel/reveal.js/#revealjs) presentation.
 
